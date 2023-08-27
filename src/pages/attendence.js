@@ -1,30 +1,10 @@
 import Head from "next/head";
 import { useState } from "react";
-import QrReader from "react-qr-reader";
 import Image from "next/image";
 import styles from "@/styles/attendence.module.css";
 import Link from "next/link";
 import NavBar from "../../Components/Navbar";
 export default function LoginPage() {
-  const [selected, setSelected] = useState("environment");
-  const [startScan, setStartScan] = useState(false);
-  const [loadingScan, setLoadingScan] = useState(false);
-  const [data, setData] = useState("");
-
-  const handleScan = async (scanData) => {
-    setLoadingScan(true);
-    console.log(`loaded data data`, scanData);
-    if (scanData && scanData !== "") {
-      console.log(`loaded >>>`, scanData);
-      setData(scanData);
-      setStartScan(false);
-      setLoadingScan(false);
-      // setPrecScan(scanData);
-    }
-  };
-  const handleError = (err) => {
-    console.error(err);
-  };
   return (
     <>
       <Head>
@@ -44,38 +24,38 @@ export default function LoginPage() {
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <div className="App">
-          <h1>Hello CodeSandbox</h1>
-          <h2>
-            Last Scan:
-            {selected}
-          </h2>
+        <form action="" className={styles.form_main}>
+          <p className={styles.heading}>Attendence</p>
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              className={styles.inputField}
+              id="username"
+              placeholder="Register Number"
+            />
+          </div>
 
-          <button
-            onClick={() => {
-              setStartScan(!startScan);
-            }}
-          >
-            {startScan ? "Stop Scan" : "Start Scan"}
-          </button>
-          {startScan && (
-            <>
-              <select onChange={(e) => setSelected(e.target.value)}>
-                <option value={"environment"}>Back Camera</option>
-                <option value={"user"}>Front Camera</option>
-              </select>
-              <QrReader
-                facingMode={selected}
-                delay={1000}
-                onError={handleError}
-                onScan={handleScan}
-                // chooseDeviceId={()=>selected}
-                style={{ width: "300px" }}
-              />
-            </>
-          )}
-          {loadingScan && <p>Loading</p>}
-          {data !== "" && <p>{data}</p>}
+          <div className={styles.inputContainer}>
+            <input
+              type="password"
+              className={styles.inputField}
+              id="password"
+              placeholder="Subject"
+            />
+          </div>
+
+          {/* <a className={styles.forgotLink} href="#">
+            Mark your attendence by scanning the QR
+          </a> */}
+          <a href="/scan" className={styles.card}>
+            <h2 className={styles.qr}>Scan a QR code&rarr;</h2>
+            <p className={styles.red}>
+              *Scan the code placed in your classroom
+            </p>
+          </a>
+        </form>
+        <div className={styles.box}>
+          <Image src="/class1.png" height={466} width={781} />
         </div>
       </main>
     </>
