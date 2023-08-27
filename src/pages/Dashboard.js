@@ -24,7 +24,7 @@ export default function LoginPage() {
       <NavBar />
       <main className={styles.main}>
         <div className={styles.Lcontainer}>
-          <h2 className={styles.head}>Overall Attendence</h2>
+          <h2 className={styles.head}>Overall Attendance</h2>
           <h5 className={styles.subhead}>Semester 7</h5>
           <svg viewBox="0 0 36 36" className={styles.circularchart}>
             <path
@@ -60,14 +60,14 @@ export default function LoginPage() {
           </div>
         </div>
         <div className={styles.Lcontainer}>
-          <div className={styles.head}>Subject-wise Attendence</div>
+          <div className={styles.head}>Subject-wise Attendance</div>
 
           <div className={styles.card}>
             <a className={styles.card1} href="#">
               <p>Social Media Lecture</p>
               <div className={styles.per}>70%</div>
               <p className={styles.small}>
-                Maked attendence for 20 Aug 23' || Attendend Classes:25 || Total
+                Maked attendance for 20 Aug 23' || Attended Classes:25 || Total
                 Classes: 28
               </p>
               <div className={styles.gocorner} href="#">
@@ -81,8 +81,8 @@ export default function LoginPage() {
               <p>CS Fundamentals Lecture</p>
               <div className={styles.per}>40%</div>
               <p className={styles.small}>
-                Missed attendence for 20 Aug 23' || Attendend Classes:20 ||
-                Total Classes: 29
+                Missed attendance for 20 Aug 23' || Attended Classes:20 || Total
+                Classes: 29
               </p>
               <div className={styles.gocorner} href="#">
                 <div className={styles.goarrow}>→</div>
@@ -94,7 +94,7 @@ export default function LoginPage() {
               <p>Operating System Lecture</p>
               <div className={styles.per}>65%</div>
               <p className={styles.small}>
-                Maked attendence for 20 Aug 23' || Attendend Classes:29 || Total
+                Maked attendance for 20 Aug 23' || Attended Classes:29 || Total
                 Classes: 35
               </p>
               <div className={styles.gocorner} href="#">

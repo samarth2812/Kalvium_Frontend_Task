@@ -25,7 +25,7 @@ export default function LoginPage() {
       <NavBar />
       <main className={styles.main}>
         <form action="" className={styles.form_main}>
-          <p className={styles.heading}>Attendence</p>
+          <p className={styles.heading}>Attendance</p>
           <div className={styles.inputContainer}>
             <input
               type="text"
@@ -37,7 +37,7 @@ export default function LoginPage() {
 
           <div className={styles.inputContainer}>
             <input
-              type="password"
+              type="text"
               className={styles.inputField}
               id="password"
               placeholder="Subject"

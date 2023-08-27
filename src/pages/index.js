@@ -38,7 +38,7 @@ export default function Home() {
           <h1 className={styles.head}>Know Your TurnOut</h1>
           <Image src="/Hand.png" width={100} height={200} />
           <p className={styles.para}>
-            Check attendence. Mark attendence. Calculate missed classes.
+            Check attendance. Mark attendance. Calculate missed classes.
           </p>
           <p className={styles.para}>All of it: In one place</p>
           <Link class={styles.btn} href="/LoginPage">
