@@ -1,0 +1,49 @@
+
+  
+.mainnav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hello{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    text-decoration: none;
+  }
+  .u{
+    text-decoration: none;
+    padding: 5px 8px;
+  }
+  .fo{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+  }
+  .fer{
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #000;
+    position: relative;
+    font-weight: 600;
+  }
+  .fer::before{
+    background: hsl(45 100% 70%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+  }
+  .fer:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
